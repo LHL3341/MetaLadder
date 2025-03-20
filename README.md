@@ -1,31 +1,72 @@
 # MetaLadder
 The code for paper **"MetaLadder: Ascending Mathematical Solution Quality via Analogical-Problem Reasoning Transfer"**.
 
-## Setup
+![method](arch.png)
+
+## ⚙️ Setup
 
 ```
-conda create -n metaladder python=3.11
+conda create -n metaladder --yes python=3.11
 conda activate metaladder
 pip install -r requirements.txt
 ```
-## Data
-All data can be found in `./data`, include original CoT data, MetaLadder-enhanced data, MetaLadder+Reverse data, RefAug-augmented data, MetaMath data, AugCoT data.
+## 📂 Data
+All required data is located in the `./data` directory and includes:
+- Original CoT data
+- MetaLadder-enhanced data
+- MetaLadder+Reverse data 
+- RefAug-augmented data
+- MetaLadder-enhanced MetaMath data
+- MetaLadder-enhanced AugCoT data
 
-## Train
-1. Clone LLaMA-Factory.
+## 🔨 Training
+1. Clone LLaMA-Factory
     ```
     git clone https://github.com/hiyouga/LLaMA-Factory
     ``` 
 
-2. Add config of trainsets in `./LLaMA-Factory/data/dataset_info.sh` and the training prompt in `./LLaMA-Factory/src/llamafactory/data/template.py`.
-3. Run `bash train.sh`.
+2. Configure Training
+    
+    - Update the training set configurations in `./LLaMA-Factory/data/dataset_info.sh`
+    - Customize the training prompt in `./LLaMA-Factory/src/llamafactory/data/template.py`.
+  
+3. Start Training
+   ```
+   bash train.sh
+   ```
 
 
-## Test
-- For normal test, run `bash test.sh`.
-- For shortcut inference, run `bash shortcut.sh`.
+## ⚖️ Evaluation
+- Normal Testing
+  
+  Execute the test script:
+  ```
+  bash test.sh
+  ```
+- Shortcut Inference
+  
+  Run the shortcut inference script:
+  ```
+  bash shortcut.sh
+  ```
+  
+## 🔄 Self-evolution
+1. Data Sampling
+   - For standard data sampling, run:
 
-## Self-evolution
-1. Run `bash sample.sh` for data-sampling. For sampling on reversed data, run `bash reverse_sample.sh`.
-2. Append sampled data to original data.
-3. Train the base model by `bash train.sh`.
+     ```
+     bash sample.sh
+     ```
+   - For sampling on reversed data, run:
+
+     ```
+     bash reverse_sample.sh
+     ```
+2. Data Augmentation
+
+   Append the sampled data to the original dataset.
+3. Retrain the Base Model
+
+   ```
+   bash train.sh
+   ```
