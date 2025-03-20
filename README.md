@@ -2,6 +2,10 @@
 The code for paper **"MetaLadder: Ascending Mathematical Solution Quality via Analogical-Problem Reasoning Transfer"**.
 
 ![method](arch.png)
+Large Language Models (LLMs) excel in mathematical reasoning using Chain-of-Thought (CoT) techniques. However, unlike human problem-solving—which often leverages analogous past examples—current methods directly generate answers. Inspired by this, we introduce MetaLadder, a framework that prompts LLMs to recall similar meta-problems and their CoT solutions before tackling the target problem. Experiments on mathematical benchmarks show that MetaLadder boosts accuracy by 10.3% over standard CoT approaches.
+
+Paper link: [https://arxiv.org/abs/2503.14891](https://arxiv.org/abs/2503.14891)
+
 
 ## ⚙️ Setup
 
