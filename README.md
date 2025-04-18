@@ -74,3 +74,14 @@ All required data is located in the `./data` directory and includes:
    ```
    bash train.sh
    ```
+---
+
+## 📖 Citation
+```
+@article{lin2025metaladder,
+  title={MetaLadder: Ascending Mathematical Solution Quality via Analogical-Problem Reasoning Transfer},
+  author={Lin, Honglin and Pan, Zhuoshi and Li, Yu and Pei, Qizhi and Gao, Xin and Cai, Mengzhang and He, Conghui and Wu, Lijun},
+  journal={arXiv preprint arXiv:2503.14891},
+  year={2025}
+}
+```
